@@ -2,6 +2,8 @@ import random
 import time
 import csv
 
+question='Choose the correct answer for: '
+
 class Vocabulary:
     def __init__(self):
         self.vocabulary={}
@@ -9,7 +11,7 @@ class Vocabulary:
 
     def import_words(self):
         self.vocabulary={}
-        with open("vocabulary_notes.csv", encoding='UTF-8') as csv_file:
+        with open(r"C:\Users\Monster\Desktop\vocabulary_notes.csv", encoding='UTF-8') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=';')
             for row in csv_reader:
                 key=row[0] #keys = en words
@@ -28,6 +30,12 @@ class Vocabulary:
             answers=list(self.vocabulary.values())
             answers.remove(answer_true)
             random.shuffle(answers)
+
+            def output():
+                variants={"A": random.choice(answers), "B": random.choice(answers), "C": answer_true, "D":random.choice(answers)}
+
+            return output()
+                    
         else:
             random.shuffle(list(self.vocabulary.values()))
             random_word=random.choice(list(self.vocabulary.values()))
