@@ -87,7 +87,6 @@ class Vocabulary:
         else:
             return False
             
-
 if __name__=='__main__':
     v = Vocabulary()
     v.start_quiz()
