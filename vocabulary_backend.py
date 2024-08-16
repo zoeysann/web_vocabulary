@@ -2,26 +2,24 @@ import random
 import time
 import csv
 
-question='Choose the correct answer for: '
-
 class Vocabulary:
     def __init__(self):
         self.vocabulary={}
-        self.tcount=0
+        self.tcount=0 #true count
 
+    # this method extracts words from csv and collects in atttr vocabulary dict
     def import_words(self):
         self.vocabulary={}
-        with open(r"C:\Users\Monster\Desktop\vocabulary_notes.csv", encoding='UTF-8') as csv_file:
+        with open(r"vocabulary_notes.csv", encoding='UTF-8') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=';')
             for row in csv_reader:
                 key=row[0] #keys = en words
                 value=row[1] #value = az words
                 self.vocabulary[key]=value
-        return self.vocabulary
-
-    def generate_quiz(self):
-        # WILL SHUFFLE A LIST AND PICK THE QUESTION.
-        questions=['question_en', 'question_az']
+    
+    #this method takes wrods from vocabulary attr. and returns random question (random selected word) with possible variants.
+    def get_question(self): 
+        questions=['question_en'] #, 'question_az'
         quiz=random.choice(questions)
         if quiz=='question_en':
             random.shuffle(list(self.vocabulary.keys()))
@@ -31,11 +29,22 @@ class Vocabulary:
             answers.remove(answer_true)
             random.shuffle(answers)
 
-            def output():
-                variants={"A": random.choice(answers), "B": random.choice(answers), "C": answer_true, "D":random.choice(answers)}
+            variants={"A": random.choice(answers), "B": random.choice(answers), "C": answer_true, "D":random.choice(answers)}
 
-            return output()
-                    
+            variants_list=[answer_true]
+            for key in list(variants.keys())[:-1]:
+                random.shuffle(answers)
+                variants[key]=random.choice(answers)
+                variants_list.append(variants[key])
+
+            random.shuffle(variants_list)
+            for key in variants.keys():
+                variants[key]=variants_list.pop()
+
+            # for key, value in variants.items():
+            #     print(f'{key}: {value}')
+            return (random_word, variants, answer_true)
+        
         else:
             random.shuffle(list(self.vocabulary.values()))
             random_word=random.choice(list(self.vocabulary.values()))
@@ -43,16 +52,49 @@ class Vocabulary:
             answers=list(self.vocabulary.keys())
             answers.remove(answer_true)
             random.shuffle(answers)
-            pass
+            
+            variants={"A": random.choice(answers), "B": random.choice(answers), "C": answer_true, "D":random.choice(answers)}
 
-        return quiz
+            variants_list=[answer_true]
+            for key in list(variants.keys())[:-1]:
+                random.shuffle(answers)
+                variants[key]=random.choice(answers)
+                variants_list.append(variants[key])
+
+            random.shuffle(variants_list)
+            for key in variants.keys():
+                variants[key]=variants_list.pop()
+
+            # for key, value in variants.items():
+            #     print(f'{key}: {value}')
+
+            return (random_word, variants, answer_true)
         
-    def check_answer(self, your_answer):
-        # your_answer=int(input("Your answer: "))
-        if your_answer==self.answer_true:
-            self.tcount=+1
-            
+
+    def start_quiz(self):
+        self.import_words()
+        list = self.get_question()
+        print("What is the translation of given word?: ", list[0])
+        for key, value in list[1].items():
+                print(f'{key}: {value}')
+        user_answer=input("Your answer (A/B/C/D): ")
+        print(self.check_answer(list[1][user_answer.upper()], list[2]))
 
 
-            # UPLOAD TO GITHUB!!!
+    def check_answer(self, user_answer, correct_answer):
+        if user_answer==correct_answer:
+            return True
+        else:
+            return False
             
+
+if __name__=='__main__':
+    v = Vocabulary()
+    v.start_quiz()
+
+#question - random_word, variants, correct_answer
+#class question - attribute
+#objects
+#class Question()
+
+# UPLOAD TO GITHUB!!!
