@@ -1,0 +1,198 @@
+Marriage;Toy
+Entrance;Giriş 
+Existence;Mövcud_olma
+Accountant;Mühasib
+Freedom;Azalıq
+Actress;Aktrisa
+Information;Məlumat
+Edition;Nəşr
+Editor;Redaktor
+Childhood;Uşaqlıq
+Optimism;Optimistik
+Economist;Ekonomist
+Librarian;Kitabxanaçı
+Heroine;Qadın_qəhrəman
+Behaviour;Davranış
+Activity;Fəallıq
+Booklet;Kitabça
+Happiness;Xoşbəxtlik
+Friendship;Dostluq
+Discovery;Kəşf
+Strength;Qüvvət
+Experiment;Təcrübə
+Enter;Daxil_olmaq
+Unemployment;İşsizlik
+Misunderstanding;Anlaşılmazlıq
+Inexperience;Təcrübəsizlik
+Distrust;Güvənsizlik
+Editor-in-chief;Baş_redaktor
+Mother-in-law;Qaynana
+Sister-in-law;Baldız
+Mistake;Səhv
+Worker;Fəhlə
+Few;Az(s)
+A few;Bir_az(s)
+Little;Az(s.b)
+A little;Bir_az(s.b)
+Whole;Bütöv
+Luck;Bəxt
+Advice;Məsləhət
+Education;Təhsil
+Hate;Nifrət
+Knowledge;Bilik
+Coffee;Kofe
+Oil;Neft_yağ
+Beer;Pivə
+Water;Sulamaq
+Money;Pul
+Luggage;Yük
+Furniture;Mebel
+Traffic;Nəqliyyat
+Meat;Ət
+Bread;Çörək
+Butter;Yağ
+A bottle of;Bir putulka
+A bowl of;Bir kasa
+A cup of;Bir fincan
+A bar of;Bir plitka
+A piece of;Bir tikə
+A glass of;Bir stəkan
+A box of;Bir qutu
+A loaf of;Bir kömbə
+A drop of;Bir damcı
+A slice of;Bir dilim
+A kilo of;Bir kilo
+A bunch of;Bir dəstə
+A game of;Bir oyun
+A jar of;Bir bardak
+A carton of;Bir karton
+A tube of;Bir tubik
+A sheet of;Bir vərəq
+A can of;Bir banka
+A sack of;Bir kisə
+Much;Çoxlu(s)
+Many;Çoxlu(s.b)
+A lot of;Çoxlu
+Dream;Yuxu(arzu,xəyal)
+Kindness;Xeyirxahlıq
+Beauty;Gözəllik
+Darkness;Qaranlıq
+Action;Fəaliyyət
+Taste;Dadmaq
+Possibility;Mümkünlük
+Joke;Zarafat
+Storm;Tufan
+Idea;Fikir
+Impression;Təəssüraf
+Hour;Saat
+Cloud;Bulud
+Hope;Ümid(etmək)
+Wish;Arzu(etmək)
+Chance;Şans
+Bench;Skamya
+Zero;Sıfır
+Self;Öz
+Wife;Arvad
+Wolf;Canavar
+Calf;Buzov
+Shelf;Rəf
+Thief;Oğru
+Leaf;Yarpaq
+Life;Həyat
+Knife;Bıçaq
+Half;Yarı
+Sheaf;Dəstə
+Chief;Rəhbər(başçı)
+Handkerchief;Əl_dəsmalı
+Cliff;Sıldırım(qaya)
+Muff;Mufta
+Cuff;Zərbə
+Hoaf;Dırnaq(heyvanlarda)
+Wharf;Sahil(körpü)
+Scarf;Şərf
+Baby;Uşaq(körpə)
+School-mate;Məktəb_yoldaşı
+Mate;Yoldaş
+Sock;Corab(qısa)
+Spectacles;Eynək
+Trousers;Şalvar
+Jeans;Cins
+Shorts;Şortik
+Pyjamas;Pijama
+Pincers;Kəlbətin
+Pliers;Kəlbətin(maşa)
+Headphones;QUlaqlıq
+Tongs;Kəlbətin(qənd,buz,kömür)
+Fetters;Qandal(ayağa taxılan)
+Handcuffs;Qandal(ələ taxılan)
+Scissors;Qayçı
+Scales;Tərəzi
+Binoculars;Durbin
+Tights;Tayt
+Glasses;Eynək
+Twezers;Pinset(maqqaş)
+Shoe;Ayaqqabı
+Boot;Çəkmə
+Stocking;Corab(uzun)
+Goods;Mal(əmtəə)
+Clothes;Geyim(paltar)
+Poultry;Ev_quşları
+Cattle;Mal-qara
+Stairs;Pilləkən
+Contents;Mündəricat
+Gentry;Kiçik-mülki_zadəganlıq
+Polis;Polis
+Officer;Zabit
+Clerk;Məmur
+Mathematics;Riyaziyyat
+Physics;Fizika
+Politics;Siyasət
+Athletics;Atletika
+Mechanics;Mexanika
+Economics;İqtisadiyyat
+Phonetics;Fonetika
+Electronics;Elektronika
+Statistics;Statistika
+Linguistics;Dilçilik
+Means;Növ(lər)
+Series;Seriya(lar)
+Species;Cins(lər)
+Bake;Bişirmək
+Baker;Çörəkçi
+Bakery;Çörəkxana
+Butcher;Qəssab
+Butcher's;Ət_dükanı
+Grocer;Ərzaq_satıcısı
+Grocery;Ərzaq_dükanı
+Greengrocer;Göy_göyərti_satıcısı
+Greengrocer's;Meyvə_Tərəvəz_dükanı
+Chemist;Əzcaçı(kimyaçı)
+Chemist's;Aptek
+Cacao;Kakao
+Lemonade;Limonad
+Juice;Şirə(meyvə)
+Wine;Şərab
+Champagne;Şampan
+Vodka;Araq
+Whiskey;Viski
+Vinegar;Sirkə
+Sous;Sos
+Petroleum;Neft
+Petrol;Benzin
+Gasoline;Gazolin
+Blood;Qan
+Shampoo;Şampun
+Ink;Mürəkkəb
+Glue;Yapışqan
+Air;Hava
+Oxygen;Oksigen
+Hydrogen;Hidrogen
+Nydrogen;Azot
+Carbon dioxide;Karbon_di_oksid
+Smoke;Tüstü
+Steam;Buxar
+Cheese;Pendir
+Fruit;Meyvə
+Ice;Buz
+Gold;Qızıl
+Selver;Gümüş
