@@ -6,6 +6,7 @@ class Vocabulary:
     def __init__(self):
         self.vocabulary={}
         self.tcount=0 #true count
+        self.fcount=0 #false count
 
     # this method extracts words from csv and collects in atttr vocabulary dict
     def import_words(self):
@@ -83,10 +84,14 @@ class Vocabulary:
 
     def check_answer(self, user_answer, correct_answer):
         if user_answer==correct_answer:
-            return True
+            self.tcount=+1
         else:
-            return False
-            
+            self.fcount=+1
+
+class Question(Vocabulary):
+        super()
+
+
 if __name__=='__main__':
     v = Vocabulary()
     v.start_quiz()
