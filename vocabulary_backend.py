@@ -1,6 +1,5 @@
 import random
-import time
-import csv
+import mysql.connector
 
 class Vocabulary:
     def __init__(self):
@@ -8,15 +7,26 @@ class Vocabulary:
         self.tcount=0 #true count
         self.fcount=0 #false count
 
-    # this method extracts words from csv and collects in atttr vocabulary dict
-    def import_words(self):
+    def import_words(self): # connect to db
+        mydb=mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="zoey_464852",
+            database="web_vocabulary"
+        )
+        mycursor = mydb.cursor()
+
         self.vocabulary={}
-        with open(r"vocabulary_notes.csv", encoding='UTF-8') as csv_file:
-            csv_reader = csv.reader(csv_file, delimiter=';')
-            for row in csv_reader:
-                key=row[0] #keys = en words
-                value=row[1] #value = az words
-                self.vocabulary[key]=value
+
+        mycursor.execute("SELECT * FROM idk_name")
+        myresult = mycursor.fetchall()
+
+        for x in myresult:
+            key=x[0]
+            value=x[1]
+            self.vocabulary[key]=value
+        return self.vocabulary
+
     
     #this method takes wrods from vocabulary attr. and returns random question (random selected word) with possible variants.
     def get_question(self): 
@@ -88,13 +98,15 @@ class Vocabulary:
         else:
             self.fcount=+1
 
-class Question(Vocabulary):
-        super()
 
+class Question(Vocabulary):
+        def __init__(self):
+            super().__init__()
 
 if __name__=='__main__':
     v = Vocabulary()
     v.start_quiz()
+
 
 #question - random_word, variants, correct_answer
 #class question - attribute

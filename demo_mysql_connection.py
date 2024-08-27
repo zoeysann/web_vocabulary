@@ -1,4 +1,13 @@
 import mysql.connector
+import csv
+
+def import_words():
+        vocabulary=[]
+        with open(r"vocabulary_notes.csv", encoding='UTF-8') as csv_file:
+            csv_reader = csv.reader(csv_file, delimiter=';')
+            for row in csv_reader:
+                vocabulary.append([row[0], row[1]])
+            return vocabulary
 
 mydb=mysql.connector.connect(
     host="localhost",
@@ -17,14 +26,11 @@ mycursor = mydb.cursor()
 #     print(i)
 
 # sql="INSERT INTO idk_name (en, az) VALUES (%s, %s)"
-# val=[
-#     ('Marriage', 'Toy'),
-#     ('Entrance', 'Giriş'),
-#     ('Existence', 'Mövcud_olma'),
-#     ('Accountant', 'Mühasib')
-# ]
+# val=import_words()
 
-# mycursor.executemany(sql, val)
+# for i in val:
+#      # i = list[en, az] 
+#      mycursor.execute(sql, (i[0], i[1]))
 
 # mydb.commit()
 
@@ -38,7 +44,7 @@ myresult = mycursor.fetchall()
 for x in myresult:
   print(x)
 
-# sql = "DELETE FROM idk_name WHERE id>4"
+# sql = "DELETE FROM idk_name WHERE id<5"
 
 # mycursor.execute(sql)
 
