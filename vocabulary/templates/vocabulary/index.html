@@ -4,6 +4,11 @@
 {% block content %}
 <div class="home-container">
     <button onclick="window.location.href=''">Start Quiz</button>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.en }} - {{ item.az }}</li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}
 

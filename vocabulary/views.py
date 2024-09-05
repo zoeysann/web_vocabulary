@@ -1,7 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import idk_name
 
 # Create your views here.
+def item_list(request):
+    items = idk_name.objects.all()  # Retrieve all items from the database
+    context = {
+        'items': items
+    }
+    return render(request, 'vocabulary/index.html', context)
+
 def home(request):
     return render(request, 'vocabulary/index.html')
 

@@ -83,13 +83,14 @@ class Vocabulary:
         
 
     def start_quiz(self):
-        self.import_words()
-        list = self.get_question()
-        print("What is the translation of given word?: ", list[0])
-        for key, value in list[1].items():
-                print(f'{key}: {value}')
-        user_answer=input("Your answer (A/B/C/D): ")
-        print(self.check_answer(list[1][user_answer.upper()], list[2]))
+        while True:
+            self.import_words()
+            list = self.get_question()
+            print("What is the translation of given word?: ", list[0])
+            for key, value in list[1].items():
+                    print(f'{key}: {value}')
+            user_answer=input("Your answer (A/B/C/D): ")
+            print(self.check_answer(list[1][user_answer.upper()], list[2]))
 
 
     def check_answer(self, user_answer, correct_answer):
@@ -97,7 +98,7 @@ class Vocabulary:
             self.tcount=+1
         else:
             self.fcount=+1
-
+        return f"You've made {self.tcount} truths\nYou've made {self.fcount} mistakes"
 
 class Question(Vocabulary):
         def __init__(self):
@@ -106,11 +107,8 @@ class Question(Vocabulary):
 if __name__=='__main__':
     v = Vocabulary()
     v.start_quiz()
-
-
-#question - random_word, variants, correct_answer
-#class question - attribute
-#objects
-#class Question()
+    #v.check_answer()
+    
+# WELL, I DON'T KNOW.
 
 # UPLOAD TO GITHUB!!!
